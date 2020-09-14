@@ -1,0 +1,15 @@
+# Test
+/tests/*
+coverage
+
+# CI/CD
+dist
+
+# JavaScript
+node_modules
+
+# VS Code
+.vscode
+
+# Mongo
+mongo.js

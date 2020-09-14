@@ -1,0 +1,87 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "API Documentation for R API",
+    "version": "0.0.1",
+    "title": "Swagger for R API",
+    "contact": { "email": "raymond_squared@live.com" }
+  },
+  "servers": [],
+  "tags": [
+    {
+      "name": "domain",
+      "description": "Domain related description"
+    }
+  ],
+  "schemes": ["https"],
+  "paths": {
+    "/api/v1/domain/:id": {
+      "get": {
+        "tags": ["domain"],
+        "description": "Returned a single domain model",
+        "operationId": "getOneDomainModel",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful get operation",
+            "schema": {
+              "type": "object",
+              "items": { "$ref": "#/components/schemas/Output" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DomainModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "dateTime": {
+            "type": "string"
+          },
+          "numeric": {
+            "type": "number"
+          }
+        }
+      },
+      "RError": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "number"
+          },
+          "httpStatusCode": {
+            "type": "number"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "Output": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/DomainModel"
+          },
+          "error": {
+            "$ref": "#/components/schemas/RError"
+          }
+        }
+      }
+    }
+  }
+}
