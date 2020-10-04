@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import { createServer as createHTTPServer } from 'http';
+import morgan from 'morgan';
 import swaggerUI from 'swagger-ui-express';
 
 import apiRouter from './routers/api';
@@ -8,6 +9,7 @@ import config from './config/config';
 import { errorAdapterMiddleware, errorLoggingMiddleware } from './middlewares/error';
 
 const app = express();
+app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json({ limit: '1MB' }));
 app.use(express.static('public'));

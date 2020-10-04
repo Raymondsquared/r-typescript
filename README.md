@@ -43,7 +43,7 @@ npm install
 
 Where to start?
 
-- `main.js` is the first points of entry in this application.
+- `main.ts` is the first points of entry in this application.
 
 ### Test
 
