@@ -26,7 +26,7 @@ A small codebase for emulating a business scenario with TypeScript.
 
 This codebase requires the following to run:
 
-- [Node.js][node] 10+
+- [Node.js][node] 12+
 - [npm][npm] (normally comes with Node.js)
 
 ## Architecture Diagram
@@ -74,15 +74,15 @@ npm run start
 - [ ] Node JS - Worker
 - [ ] Node JS - API
 - [ ] React JS - UI
-- [ ] Package your application in a Docker container.
-- [ ] Achieve >80% test coverage.
-- [ ] Healthcheck endpoint.
-- [ ] OpenAPI 3 Docs (Swagger).
-- [ ] Infrastructure as Code (Cloud Formation).
-- [ ] Cloudfront CDN.
-- [ ] HTTPS from the gateway layer.
-- [ ] Mobile first UI.
-- [ ] AWESOME architecture diagram.
+- [ ] Package application in a Docker container
+- [ ] Achieve >80% test coverage
+- [ ] Healthcheck endpoint
+- [ ] OpenAPI 3 Docs (Swagger)
+- [ ] Infrastructure as Code (Cloud Formation)
+- [ ] Cloudfront CDN
+- [ ] HTTPS from the gateway layer
+- [ ] Mobile first UI
+- [ ] AWESOME architecture diagram
 
 ## Other Information
 
